@@ -1,7 +1,0 @@
-applications:
-- name: node_train_deploy
-  random-route: true
-  path: app
-  memory: 128M
-  buildpacks:
-  - nodejs_buildpack

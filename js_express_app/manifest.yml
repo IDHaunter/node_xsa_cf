@@ -1,5 +1,5 @@
 applications:
-- name: node_train_deploy
+- name: js_express_app
   random-route: true
   path: app
   memory: 128M

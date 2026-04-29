@@ -1,0 +1,22 @@
+_schema-version: "3.2"
+ID: node_xsa_cf
+version: 26.16.3
+modules:
+  - name: js_express_app
+    type: nodejs
+    path: js_express_app/app
+    properties:
+      AUTHORIZE: TRUE
+      LOG_LEVEL: INFO
+    parameters:
+      memory: 128M
+      disk-quota: 1G
+    requires:
+      - name: UAA-service
+
+resources:
+  - name: UAA-service
+    type: org.cloudfoundry.existing-service
+    optional: true
+    properties:
+      service-instance-name: '${service-name}'

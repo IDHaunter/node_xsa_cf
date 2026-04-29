@@ -1,5 +1,6 @@
 #Node packages
 node_modules/
+mta_archives/
 .vscode/
 !.gitkeep
 

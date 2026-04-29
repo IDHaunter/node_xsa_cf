@@ -1,7 +1,7 @@
 {
-  "name": "app",
+  "name": "js_express_app",
   "version": "1.0.0",
-  "description": "My First Node Application for SCP(Cloud Foundry)",
+  "description": "Blank Express app for XSA CF",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "@sap/xsenv": "^4",
+    "@sap/xssec": "^3"
   }
 }
