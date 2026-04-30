@@ -1,13 +1,17 @@
 const express = require('express');
-const authMiddleware = require('../middleware/auth');
 
 const router = express.Router();
 
-router.get('/secure', authMiddleware, (req, res) => {
-    const userInfo = req.securityContext.getUserInfo();
+router.get('/secure', (req, res) => {
+    //Middleware already enforced auth
+
+    const userInfo = req.securityContext
+        ? req.securityContext.getUserInfo()
+        : null;
 
     res.json({
         message: 'Secure data',
+        currentUser: req.currentUser,
         user: userInfo
     });
 });

@@ -15,6 +15,8 @@ router.get('/', (req, res) => {
                 <p>version: <b>${config.version}</b></p>
                 <p>date: <b>${config.date}</b></p>
                 <p>info: <b>${config.info}</b></p>
+                <p>authorize: <b>${config.authorize}</b></p>
+                <p>log level: <b>${config.logLevel}</b></p>
             </body>
         </html>
     `;

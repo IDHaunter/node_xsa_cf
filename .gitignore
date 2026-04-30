@@ -1,6 +1,10 @@
 #Node packages
 node_modules/
+
+#MTA build and archive files
 mta_archives/
+
+
 .vscode/
 !.gitkeep
 

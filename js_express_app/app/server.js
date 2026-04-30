@@ -3,12 +3,17 @@ const http = require('http');
 const routes = require('./routes');
 const config = require('./config');
 const logger = require('./logger');
+const authMiddleware = require('./middleware/auth');
 
-// Create Express app and HTTP server
+logger.info(`Starting ${config.appName} v${config.version}...`);
+
 const app = express();
 const server = http.createServer(app);
 
-// Connect routes
+// Apply auth globally (handles public paths internally)
+app.use(authMiddleware);
+
+// Connect routes middleware
 app.use(routes);
 
 // Start server
